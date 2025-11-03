@@ -1,33 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Beams from './Beams';
 
-function App() {
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
-
+const App = () => {
   return (
-    <div className="App">
-      <section id="headNav"></section>
+    <div className="mainContainer">
+      <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+        <Beams
+          beamWidth={2}
+          beamHeight={30}
+          beamNumber={20}
+          lightColor="#ffffff"
+          speed={2}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={30}
+        />
+      </div>
+      <section className="headNav">
+        <h1>Hi I'm Joey</h1>
+      </section>
       <section id="about"></section>
       <section id="experience"></section>
       <section id="projects"></section>
-      <section id="botNav"></section>
+      <section id="footer"></section>
     </div>
   );
 }
